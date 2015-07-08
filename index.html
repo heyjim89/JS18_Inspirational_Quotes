@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Lato font in -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <title>JS6</title>
+</head>
+
+<body>
+    <main>
+
+        <!-- Start section for edit first and overflow hidden -->
+        <section id="edit">
+            <h1>Add a quote!</h1>
+            <form id="edit-form">
+                <div class="input">
+                    <label>Author:</label>
+                    <input type="text" id="edit-name">
+                </div>
+                <div class="input">
+                    <label>Quote:</label>
+                    <input type="text" id="edit-bio">
+                </div>
+                <!--
+               <div class="input">
+    <label>Favorite Books:</label>
+    <input type="text" id="edit-books">
+</div>
+<div class="input">
+    <label>Favorite JS Libraries:</label>
+    <input type="text" id="edit-js">
+</div>
+-->
+
+                <!-- Commenting Out Submit button for Bonus -->
+                <!-- <div class="input">
+					<input id="submit" type="submit" value="Save your Profile">
+				</div>
+ -->
+            </form>
+        </section>
+
+
+        <!-- Static profile text overlayed on top start -->
+        <section id="profile">
+            <h1>Inspirational Quotes!</h1>
+            <hr>
+
+            <div class="normal">
+                <h2>Author:</h2>
+                <p id="name"></p>
+            </div>
+            <div class="normal">
+                <h2>Quote:</h2>
+                <p id="bio"></p>
+            </div>
+            <!--
+            <div class="normal">
+                <h2>Favorite Books:</h2>
+                <p id="books"></p>
+            </div>
+-->
+            <div class="normal">
+                <!--
+      <h2>Favorite Javascript Libraries:</h2>
+<p id="js"></p>
+-->
+                <button class="toggle">Edit Profile</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
