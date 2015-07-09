@@ -1,31 +1,25 @@
 * {
     box-sizing: border-box;
 }
-
 body {
-    font-family: 'Lato',sans-serif;
+    font-family: 'Lato', sans-serif;
     font-size: 16px;
     background: #ccc;
-    text-shadow: 0px 0px 1px black;
+    text-shadow: 0px 0px 5px white;
     padding: 10px;
 }
-
 main {
     max-width: 960px;
     margin: auto;
 }
 hr {
-    width:100%;
+    width: 100%;
     margin-bottom: 20px;
-    float:left;
+    float: left;
 }
 button {
-    -moz-box-shadow: inset 0px 39px 0px -24px #e67a73;
-    -webkit-box-shadow: inset 0px 39px 0px -24px #e67a73;
     box-shadow: inset 0px 39px 0px -24px #e67a73;
     background-color: #e4685d;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
     border-radius: 4px;
     border: 1px solid #ffffff;
     display: inline-block;
@@ -36,35 +30,17 @@ button {
     padding: 6px 15px;
     text-decoration: none;
     text-shadow: 0px 1px 0px #b23e35;
+    margin: 5px;
 }
-
 label {
     font-weight: bold;
     display: block;
     font-size: 14px;
     padding: 5px 0;
 }
-#edit {
-    background: grey;
-    padding: 0px;
-    height: 0px;
-    width:100%;
-    overflow: hidden;
-    transition: all 1s;
-}
-
-#edit.active {
-    height: 370px;
-    padding: 20px;
-    color:white;
-}
-#submit{
-    -moz-box-shadow: inset 0px 39px 0px -24px #e67a73;
-    -webkit-box-shadow: inset 0px 39px 0px -24px #e67a73;
+#submit {
     box-shadow: inset 0px 39px 0px -24px #e67a73;
     background-color: #e4685d;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
     border-radius: 4px;
     border: 1px solid #ffffff;
     display: inline-block;
@@ -79,17 +55,13 @@ label {
 .input {
     margin: 10px;
 }
-.editable  input{
-    -moz-box-shadow: inset 0px 39px 0px -24px #e67a73;
-    -webkit-box-shadow: inset 0px 39px 0px -24px #e67a73;
+input {
     box-shadow: inset 0px 39px 0px -24px #e67a73;
     background-color: #e4685d;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
     border-radius: 4px;
     border: 1px solid #ffffff;
     display: inline-block;
-    cursor: pointer;
+    cursor: none;
     color: #ffffff;
     font-family: Arial;
     font-size: 15px;
@@ -97,14 +69,43 @@ label {
     text-decoration: none;
     text-shadow: 0px 1px 0px #b23e35;
 }
-
-input > {
-    width: 100%;
-    
+input#quote {
+    height: 100px;
+    width: 280px;
 }
-.normal > p{
-    color:peachpuff;
-    font-size:24px;
+.normal > p {
+    color: peachpuff;
+    font-size: 24px;
     text-shadow: 0px 3px 3px black;
 }
-
+.container {
+    border-sizing: border-box;
+    background-color: #ccd;
+    width: 100%;
+    padding: 20px;
+}
+.quote-block {
+    display: inline-block;
+    background-color: #FFF;
+    margin-right: 5px;
+    margin-top: 20px;
+    font-height: 0;
+    padding: 5px;
+}
+.quote-block > a {
+    text-decoration: none;
+    color: red;
+    text-transform: uppercase;
+    font-size: 10px;
+    padding: 5px;
+}
+.quote-text {
+    position: relative;
+    padding: 10px;
+}
+.undo {
+    display: none;
+}
+.show {
+    display: block;
+}

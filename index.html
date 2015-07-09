@@ -2,79 +2,35 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <!-- Lato font in -->
+    <meta charset="utf-8">
+    <title>Inspirational Quotes</title>
+    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <title>JS6</title>
 </head>
 
 <body>
     <main>
+        <div class="container">
 
-        <!-- Start section for edit first and overflow hidden -->
-        <section id="edit">
-            <h1>Add a quote!</h1>
-            <form id="edit-form">
-                <div class="input">
-                    <label>Author:</label>
-                    <input type="text" id="edit-name">
-                </div>
-                <div class="input">
-                    <label>Quote:</label>
-                    <input type="text" id="edit-bio">
-                </div>
-                <!--
-               <div class="input">
-    <label>Favorite Books:</label>
-    <input type="text" id="edit-books">
-</div>
-<div class="input">
-    <label>Favorite JS Libraries:</label>
-    <input type="text" id="edit-js">
-</div>
--->
+            <div class="intro">
+                <h1 class="site-title">Inspirational Quotes</h1>
 
-                <!-- Commenting Out Submit button for Bonus -->
-                <!-- <div class="input">
-					<input id="submit" type="submit" value="Save your Profile">
-				</div>
- -->
-            </form>
-        </section>
-
-
-        <!-- Static profile text overlayed on top start -->
-        <section id="profile">
-            <h1>Inspirational Quotes!</h1>
-            <hr>
-
-            <div class="normal">
-                <h2>Author:</h2>
-                <p id="name"></p>
             </div>
-            <div class="normal">
-                <h2>Quote:</h2>
-                <p id="bio"></p>
-            </div>
-            <!--
-            <div class="normal">
-                <h2>Favorite Books:</h2>
-                <p id="books"></p>
-            </div>
--->
-            <div class="normal">
-                <!--
-      <h2>Favorite Javascript Libraries:</h2>
-<p id="js"></p>
--->
-                <button class="toggle">Edit Profile</button>
-            </div>
-        </section>
-    </main>
 
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script type="text/javascript" src="main.js"></script>
+            <div class="quote-form">
+                <h2>Enter your quotes!
+			<h4>Quote:</h4>
+			<input id="quote" type="text">
+			<h4>Author</h4>
+			<input id="author" type="text">
+			<button class="btn default-btn btn-lg" id="submit">submit</button>
+		</div>
+
+		<div class="undo"> Your quote was removed <button class="btn important-btn redo">Undo</button></div>
+	</div>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="main.js"></script>
+</main>
 </body>
-
 </html>

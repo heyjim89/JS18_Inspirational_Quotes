@@ -1,41 +1,58 @@
-$(document).ready(function () {
+$(document).on('ready', function () {
 
-    var clickEdit = function () {
+    // var removeQuote = null;
+    // var undo = null;
 
-        //Scope into object
-        var edit = $('#edit');
+    $('#submit').on('click', function () {
 
-        //Toggles to active
-        edit.toggleClass('active');
-    };
+        var $quoteBlock = $('<div class="quote-block"><p class="quote-text"></p><p class="author"></p><a href="#" class="remove">Remove</a></div>');
 
+        var quote = $('#quote').val();
+        var author = $('#author').val();
 
-    $('.toggle').on('click', function () {
-        clickEdit();
+        $('input').val('');
+        $('.container').append($quoteBlock);
+        $('.quote-text').last().append('Quote: ' + quote);
+        $('.author').last().append(' ' + 'Author: ' + author);
+        $('.undo').addClass('show');
+
     });
 
 
-    $('input').on('input', function (event) {
+    $('.container').on('click', '.remove', function (event) {
         event.preventDefault();
+        $(this).parent().fadeOut(1000);
 
-        $('#name').text($('#edit-name').val());
+        setTimeout(function () {
 
-        // console.log('Name Edited: ' + $('#edit-name').val());
+            $('.undo').fadeIn(500);
 
-        $('#bio').text($('#edit-bio').val());
+            $('.redo').on('click', function () {
 
-        // console.log('Bio Edited: ' + $('#edit-bio').val());
+                $('.undo').fadeOut(500);
+                $('.quote-block').fadeIn(500);
 
-        $('#books').text($('#edit-books').val());
+            })
 
-        // console.log('Books Edited: ' + $('#edit-books').val());
+            setTimeout(function () {
+                $('.undo').fadeOut(500);
+                $('.quote-block').remove()
+            }, 5000);
 
-        $('#js').text($('#edit-js').val());
+        }, 500);
 
-        // console.log('JS Edited: ' + $('#edit-js').val());
-
-
-        // clickEdit();
     });
+
+
+    $('.rate').on('mouseover', function () {
+        $(this).addClass('rate-hover').prevAll();
+    })
+
+    $('.rate').on('mouseleave', function () {
+        $(this).nextAll().removeClass('rate-hover');
+    })
+
+
+
 
 });
